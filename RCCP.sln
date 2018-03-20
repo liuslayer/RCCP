@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCCP", "RCCP\RCCP.csproj", "{3AF568F4-A41D-4EC3-83E9-72ACD1059014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMServer", "OMServer\OMServer.csproj", "{2AD5DE10-9887-454C-813C-78F621E80067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCCP.Repository", "RCCP.Repository\RCCP.Repository.csproj", "{95326650-07D6-4664-8136-8CDBA849D823}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AF568F4-A41D-4EC3-83E9-72ACD1059014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF568F4-A41D-4EC3-83E9-72ACD1059014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF568F4-A41D-4EC3-83E9-72ACD1059014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF568F4-A41D-4EC3-83E9-72ACD1059014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD5DE10-9887-454C-813C-78F621E80067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD5DE10-9887-454C-813C-78F621E80067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD5DE10-9887-454C-813C-78F621E80067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD5DE10-9887-454C-813C-78F621E80067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95326650-07D6-4664-8136-8CDBA849D823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95326650-07D6-4664-8136-8CDBA849D823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95326650-07D6-4664-8136-8CDBA849D823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95326650-07D6-4664-8136-8CDBA849D823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

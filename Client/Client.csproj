@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22615340-57D0-45CF-A33C-A8E15BCA76C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EncryptClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EncryptClass.dll</HintPath>
+    </Reference>
+    <Reference Include="MyButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MyButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessIni.cs" />
+    <Compile Include="AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmOperation.cs" />
+    <Compile Include="BF_Video_SDK.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkageVideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkageVideoForm.Designer.cs">
+      <DependentUpon>LinkageVideoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RealPlay\RealPlayVideo.cs" />
+    <Compile Include="RecManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecManagement.Designer.cs">
+      <DependentUpon>RecManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoEffectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoEffectForm.Designer.cs">
+      <DependentUpon>VideoEffectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WheelGuard\ScreenWheelGuard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WheelGuard\ScreenWheelGuard.Designer.cs">
+      <DependentUpon>ScreenWheelGuard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Videobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Videobox.Designer.cs">
+      <DependentUpon>Videobox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransparentForm.Designer.cs">
+      <DependentUpon>TransparentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VMSdk.cs" />
+    <Compile Include="WheelGuard\WheelGuardControl.cs" />
+    <EmbeddedResource Include="AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkageVideoForm.resx">
+      <DependentUpon>LinkageVideoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecManagement.resx">
+      <DependentUpon>RecManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoEffectForm.resx">
+      <DependentUpon>VideoEffectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WheelGuard\ScreenWheelGuard.resx">
+      <DependentUpon>ScreenWheelGuard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Videobox.resx">
+      <DependentUpon>Videobox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransparentForm.resx">
+      <DependentUpon>TransparentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Entities\Client.Entities.csproj">
+      <Project>{bef8b2db-48f1-4f20-807c-fa476fdbcc1a}</Project>
+      <Name>Client.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceBaseData\DeviceBaseData.csproj">
+      <Project>{4d47e292-b166-4bdb-a5fa-c4b451b80b46}</Project>
+      <Name>DeviceBaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceRTStatus\DeviceRTStatus.csproj">
+      <Project>{528fa9cc-9882-4136-8398-a8917319a522}</Project>
+      <Name>DeviceRTStatus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InformationManagementDLL\InformationManagementDLL.csproj">
+      <Project>{121D0FAC-A591-4B01-83FB-7827F72B6353}</Project>
+      <Name>InformationManagementDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MediaStream\MediaStream.csproj">
+      <Project>{0BFA3591-0453-4259-8CED-EAF99CC244DC}</Project>
+      <Name>MediaStream</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyControlLibrary\MyControlLibrary.csproj">
+      <Project>{0352C12A-A440-4CBD-96E4-3C59C1A96C7D}</Project>
+      <Name>MyControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayBack\PlayBack.csproj">
+      <Project>{9431FBB1-BF4E-490E-B8C2-85242AA62AA5}</Project>
+      <Name>PlayBack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PresetForm\PresetForm.csproj">
+      <Project>{bd1c705d-3516-4881-9884-ec01950356c2}</Project>
+      <Name>PresetForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecDll\AccessOperation.csproj">
+      <Project>{d1f297bf-4c5c-4e81-9fae-399c6af26034}</Project>
+      <Name>AccessOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemSetupDLL\SystemSetupDLL.csproj">
+      <Project>{78D7C93C-CD46-4136-9036-BF6FD8E5CEB0}</Project>
+      <Name>SystemSetupDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurntableControlInterface\TurntableControlInterface.csproj">
+      <Project>{0ca56cc5-f4a1-40de-a7f7-9482ba2efea8}</Project>
+      <Name>TurntableControlInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\设备转移.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\Icon\icons8_Sort_Left_20px_1 拷贝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\Icon\icons8_Sort_Left_20px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\Icon\NodeCollapseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\images\Icon\NodeExpandedImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

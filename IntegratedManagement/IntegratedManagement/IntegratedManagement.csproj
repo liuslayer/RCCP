@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB7CFBC8-C51F-4A41-AA12-74897DD7E675}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegratedManagement</RootNamespace>
+    <AssemblyName>IntegratedManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=12.5.0.2, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessIni.cs" />
+    <Compile Include="AlarmInfoAddAndEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmInfoAddAndEditForm.Designer.cs">
+      <DependentUpon>AlarmInfoAddAndEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlarmInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmInfoForm.Designer.cs">
+      <DependentUpon>AlarmInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Communicate\CommunicateBase.cs" />
+    <Compile Include="Communicate\IMCommunicate.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="ImgRecAddAndEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgRecAddAndEditForm.Designer.cs">
+      <DependentUpon>ImgRecAddAndEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgRecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgRecForm.Designer.cs">
+      <DependentUpon>ImgRecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LawFileInfoAddAndEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LawFileInfoAddAndEditForm.Designer.cs">
+      <DependentUpon>LawFileInfoAddAndEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LawFileInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LawFileInfoForm.Designer.cs">
+      <DependentUpon>LawFileInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Protocol\ProtocolHandlerBase.cs" />
+    <Compile Include="StationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StationForm.Designer.cs">
+      <DependentUpon>StationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoRecAddAndEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoRecAddAndEditForm.Designer.cs">
+      <DependentUpon>VideoRecAddAndEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrateAndPublishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegrateAndPublishForm.Designer.cs">
+      <DependentUpon>IntegrateAndPublishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoRecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoRecForm.Designer.cs">
+      <DependentUpon>VideoRecForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlarmInfoAddAndEditForm.resx">
+      <DependentUpon>AlarmInfoAddAndEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmInfoForm.resx">
+      <DependentUpon>AlarmInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgRecAddAndEditForm.resx">
+      <DependentUpon>ImgRecAddAndEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgRecForm.resx">
+      <DependentUpon>ImgRecForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LawFileInfoAddAndEditForm.resx">
+      <DependentUpon>LawFileInfoAddAndEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LawFileInfoForm.resx">
+      <DependentUpon>LawFileInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StationForm.resx">
+      <DependentUpon>StationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoRecAddAndEditForm.resx">
+      <DependentUpon>VideoRecAddAndEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrateAndPublishForm.resx">
+      <DependentUpon>IntegrateAndPublishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VideoRecForm.resx">
+      <DependentUpon>VideoRecForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RCCP.Repository\RCCP.Repository.csproj">
+      <Project>{95326650-07d6-4664-8136-8cdba849d823}</Project>
+      <Name>RCCP.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

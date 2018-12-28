@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OMServer</RootNamespace>
     <AssemblyName>OMServer</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,8 +30,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,23 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AlarmInfo.cs" />
-    <Compile Include="Model\BatteryStatusInfo.cs" />
-    <Compile Include="Model\CameraInfo.cs" />
-    <Compile Include="Model\CameraStatusInfo.cs" />
-    <Compile Include="Model\CodecInfo.cs" />
-    <Compile Include="Model\Enum.cs" />
-    <Compile Include="Model\FactoryInfo.cs" />
-    <Compile Include="Model\PowerInfo.cs" />
-    <Compile Include="Model\PowerStatusInfo.cs" />
-    <Compile Include="Model\ServiceInfo.cs" />
-    <Compile Include="Model\ServiceStatusInfo.cs" />
-    <Compile Include="Model\StationInfo.cs" />
-    <Compile Include="Model\UpsInfo.cs" />
-    <Compile Include="Model\UpsStatusInfo.cs" />
-    <Compile Include="Model\VoiceInfo.cs" />
+    <Compile Include="Model\DeviceInfo.cs" />
+    <Compile Include="MutipleThreadResetEvent.cs" />
     <Compile Include="OMServerManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\ProtocolHandlerBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HikSdk\HikSdk.csproj">
+      <Project>{5bb19f0f-6e83-4b8f-91a8-d0b4b24095af}</Project>
+      <Name>HikSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogServer\LogServer.csproj">
+      <Project>{1c6804d4-eee5-4791-9121-4ff987228df0}</Project>
+      <Name>LogServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCCP.Common\RCCP.Common.csproj">
+      <Project>{c7306754-8675-4e83-b16b-409e87a96be8}</Project>
+      <Name>RCCP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCCP.Repository\RCCP.Repository.csproj">
+      <Project>{95326650-07d6-4664-8136-8cdba849d823}</Project>
+      <Name>RCCP.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

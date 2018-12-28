@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA022876-C24E-45F8-A246-A8BA0CD3BD23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSG</RootNamespace>
+    <AssemblyName>MSG</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin, Version=16.1.14.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MyControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MyControls.dll</HintPath>
+    </Reference>
+    <Reference Include="MyTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MyTool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_EconomicDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EconomicDev.Designer.cs">
+      <DependentUpon>Form_EconomicDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EconomicDevAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EconomicDevAdd.Designer.cs">
+      <DependentUpon>Form_EconomicDevAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GeographyEnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GeographyEnv.Designer.cs">
+      <DependentUpon>Form_GeographyEnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GeographyEnvAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GeographyEnvAdd.Designer.cs">
+      <DependentUpon>Form_GeographyEnvAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NationSocietyAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NationSocietyAdd.Designer.cs">
+      <DependentUpon>Form_NationSocietyAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSG_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSG_MainForm.Designer.cs">
+      <DependentUpon>MSG_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NationSociety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NationSociety.Designer.cs">
+      <DependentUpon>Form_NationSociety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_EconomicDev.resx">
+      <DependentUpon>Form_EconomicDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_EconomicDevAdd.resx">
+      <DependentUpon>Form_EconomicDevAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GeographyEnv.resx">
+      <DependentUpon>Form_GeographyEnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GeographyEnvAdd.resx">
+      <DependentUpon>Form_GeographyEnvAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_NationSociety.resx">
+      <DependentUpon>Form_NationSociety.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NationSocietyAdd.resx">
+      <DependentUpon>Form_NationSocietyAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG_MainForm.resx">
+      <DependentUpon>MSG_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9fe00521-3a8b-42b1-814e-585e99407b2e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

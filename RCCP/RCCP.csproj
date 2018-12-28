@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RCCP</RootNamespace>
     <AssemblyName>RCCP</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile>
@@ -37,29 +37,24 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\log4net.dll</HintPath>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.Common, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SuperSocket.Common.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SuperSocket.Facility, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SuperSocket.Facility.dll</HintPath>
+    <Reference Include="SuperSocket.Common">
+      <HintPath>..\lib\SuperSocket.Common.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.ServerManager, Version=1.6.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SuperSocket.ServerManager.dll</HintPath>
+    <Reference Include="SuperSocket.Facility">
+      <HintPath>..\lib\SuperSocket.Facility.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.SocketBase, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SuperSocket.SocketBase.dll</HintPath>
+    <Reference Include="SuperSocket.SocketBase">
+      <HintPath>..\lib\SuperSocket.SocketBase.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.SocketEngine, Version=1.6.6.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SuperSocket.SocketEngine.dll</HintPath>
+    <Reference Include="SuperSocket.SocketEngine">
+      <HintPath>..\lib\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -71,31 +66,158 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\STATION.cs" />
+    <Compile Include="BusinessCollaborationService\AlarmBusiness.cs" />
+    <Compile Include="BusinessCollaborationService\CheckUser.cs" />
+    <Compile Include="Command\Alarm\Alarm_DataManagement.cs" />
+    <Compile Include="Command\Alarm\DisposeAlarm.cs" />
+    <Compile Include="Command\Alarm\Pre_DataManagement.cs" />
+    <Compile Include="Command\Alarm\Video_DataManagement.cs" />
+    <Compile Include="Command\Alertor.cs" />
+    <Compile Include="Command\OMCommand\Echo.cs" />
+    <Compile Include="Command\StringSet.cs" />
+    <Compile Include="Command\TimeSet.cs" />
+    <Compile Include="Command\DataConfigurationCommand\Computer_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\ImportantLandmark_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\PersonnelInformation_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\Radar_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\Server_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\StreamMedia_DataTableControl.cs" />
+    <Compile Include="Command\DispatchCommand\DispatchCommandEnum.cs" />
+    <Compile Include="Command\DispatchCommand\DispatchMsg.cs" />
+    <Compile Include="Command\DispatchCommand\PostStationInfo.cs" />
+    <Compile Include="Command\DispatchCommand\PostAlarmInfo.cs" />
+    <Compile Include="Command\DispatchCommand\IntergratedInfoPublish.cs" />
+    <Compile Include="Command\DispatchCommand\SVMCommand.cs" />
+    <Compile Include="Command\DataConfigurationCommand\VibrationCable_DataTableControl.cs" />
+    <Compile Include="Command\DispatchCommand\SVMMsg.cs" />
+    <Compile Include="Command\EDCCommand\RemoteClientLogin.cs" />
+    <Compile Include="Command\EquipmentControlCommand\EquipmentControl.cs" />
+    <Compile Include="Command\GetArmAndDisarmList.cs" />
+    <Compile Include="Command\GetPre_arrangeList.cs" />
+    <Compile Include="Command\GetVideoAlarmList.cs" />
+    <Compile Include="Command\OMCommand\GetDeviceInfo.cs" />
+    <Compile Include="Command\OMCommand\GetDeviceStatus.cs" />
+    <Compile Include="Command\OMCommand\PostStationStatus.cs" />
+    <Compile Include="Command\OMCommand\PostCameraStatus.cs" />
+    <Compile Include="Command\OMCommand\PostUPSStatus.cs" />
+    <Compile Include="Command\OMCommand\PostSolarEnergyStatus.cs" />
+    <Compile Include="Command\UserAuthorityCommand\AddUserAuthority.cs" />
+    <Compile Include="Command\UserAuthorityCommand\DelUserAuthority.cs" />
+    <Compile Include="Command\UserAuthorityCommand\GetUserAuthorityList.cs" />
+    <Compile Include="Command\UserCommand\AddUser.cs" />
+    <Compile Include="Command\UserCommand\CheckUser.cs" />
+    <Compile Include="Command\UserCommand\DeleteUser.cs" />
+    <Compile Include="Command\UserCommand\GetUserList.cs" />
+    <Compile Include="Command\UserCommand\GetUserPagedList.cs" />
+    <Compile Include="Command\UserCommand\ModifyUser.cs" />
+    <Compile Include="Command\UserCommand\SearchUsername.cs" />
+    <Compile Include="Command\UserCommand\UpdateUser.cs" />
+    <Compile Include="Command\UserRoleCommand\AddUserRole.cs" />
+    <Compile Include="Command\DataConfigurationCommand\Camera_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\DeviceType_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\DVRorNVRSwitch_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\ProtocolType_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\SerialCOM_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\SolarEnergy_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\Station_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\TurnTable_DataTableControl.cs" />
+    <Compile Include="Command\DataConfigurationCommand\UPS_DataTableControl.cs" />
+    <Compile Include="Command\GetDeviceStaticData.cs" />
+    <Compile Include="Command\GetErrLog.cs" />
+    <Compile Include="Command\GetLinkagedata.cs" />
+    <Compile Include="Command\GetAlarmLog.cs" />
+    <Compile Include="Command\GetPre-arrangedPlanning.cs" />
+    <Compile Include="Command\GetRunLog.cs" />
+    <Compile Include="Command\MailCommand\DownloadMailFileRequest.cs" />
+    <Compile Include="Command\MailCommand\MailRecordsRequest.cs" />
+    <Compile Include="Command\GetSwitchList.cs" />
+    <Compile Include="Command\MailCommand\MailUserLoginRequest.cs" />
+    <Compile Include="Command\MailCommand\UpdateMailStatusRequest.cs" />
+    <Compile Include="Command\RestartServer.cs" />
+    <Compile Include="Command\MailCommand\MailSendResquest.cs" />
+    <Compile Include="Command\StartServer.cs" />
+    <Compile Include="Command\StopServer.cs" />
+    <Compile Include="Command\UserRoleCommand\DelUserRole.cs" />
+    <Compile Include="Command\UserRoleCommand\GetAllUserRoles.cs" />
+    <Compile Include="Command\LensProtectionCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\BCServer.cs" />
+    <Compile Include="Server\BMMSServer.cs" />
+    <Compile Include="Server\CommandDispatchServer.cs" />
+    <Compile Include="Server\DCServer.cs" />
+    <Compile Include="Server\EDCServer.cs" />
+    <Compile Include="Server\IDispatch.cs" />
+    <Compile Include="Server\LogServer.cs" />
+    <Compile Include="Server\MailServer.cs" />
+    <Compile Include="Server\ManagementServer.cs" />
     <Compile Include="Server\OMServer.cs" />
     <Compile Include="SessionFilter\IPConnectionFilter.cs" />
+    <Compile Include="Session\BCSession.cs" />
+    <Compile Include="Session\CommandDispatchSession.cs" />
+    <Compile Include="Session\EDCSession.cs" />
+    <Compile Include="Session\LogSession.cs" />
+    <Compile Include="Session\MailSession.cs" />
+    <Compile Include="Session\ManagementSession.cs" />
     <Compile Include="Session\OMSession.cs" />
+    <Compile Include="Session\UserSession.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Config\log4net.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
     </None>
+    <Content Include="Config\log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CommandFilter\" />
-    <Folder Include="Common\" />
     <Folder Include="Protocol\Factory\" />
     <Folder Include="Protocol\Filter\" />
     <Folder Include="Protocol\Model\" />
     <Folder Include="Protocol\RequestInfo\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlarmService\AlarmService.csproj">
+      <Project>{9733ed67-0e02-4662-a449-80086688b3d2}</Project>
+      <Name>AlarmService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EquipmentControlServer\EquipmentControlServer.csproj">
+      <Project>{1ff888e2-8e21-4f96-ba7a-91ac2cc35699}</Project>
+      <Name>EquipmentControlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EquipmentManagementService\EquipmentManagementService.csproj">
+      <Project>{c3f345c0-ab62-405a-9a05-74b5217c483f}</Project>
+      <Name>EquipmentManagementService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HikSdk\HikSdk.csproj">
+      <Project>{5bb19f0f-6e83-4b8f-91a8-d0b4b24095af}</Project>
+      <Name>HikSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogServer\LogServer.csproj">
+      <Project>{1c6804d4-eee5-4791-9121-4ff987228df0}</Project>
+      <Name>LogServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MailServer\MailServer.csproj">
+      <Project>{c6b19d4c-34e5-4a63-aa6a-9bad21675560}</Project>
+      <Name>MailServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OMServer\OMServer.csproj">
       <Project>{2ad5de10-9887-454c-813c-78f621e80067}</Project>
       <Name>OMServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCCP.Common\RCCP.Common.csproj">
+      <Project>{c7306754-8675-4e83-b16b-409e87a96be8}</Project>
+      <Name>RCCP.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCCP.Repository\RCCP.Repository.csproj">
+      <Project>{95326650-07D6-4664-8136-8CDBA849D823}</Project>
+      <Name>RCCP.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserManagementService\UserManagementService.csproj">
+      <Project>{009aa2ca-2dbb-434b-837b-1379c95461a8}</Project>
+      <Name>UserManagementService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

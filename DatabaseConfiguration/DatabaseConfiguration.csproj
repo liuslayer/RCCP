@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77AF7B74-981B-4E22-A9A4-777CA861A2F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatabaseConfiguration</RootNamespace>
+    <AssemblyName>DatabaseConfiguration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_edit_dialogs\Add_Modify_Camera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Camera.Designer.cs">
+      <DependentUpon>Add_Modify_Camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Computer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Computer.Designer.cs">
+      <DependentUpon>Add_Modify_Computer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_DeviceType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_DeviceType.Designer.cs">
+      <DependentUpon>Add_Modify_DeviceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_ImportantLandmark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_ImportantLandmark.Designer.cs">
+      <DependentUpon>Add_Modify_ImportantLandmark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_PersonnelInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_PersonnelInformation.Designer.cs">
+      <DependentUpon>Add_Modify_PersonnelInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Radar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Radar.Designer.cs">
+      <DependentUpon>Add_Modify_Radar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Server.Designer.cs">
+      <DependentUpon>Add_Modify_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_StreamMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_StreamMedia.Designer.cs">
+      <DependentUpon>Add_Modify_StreamMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_ProtocolType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_ProtocolType.Designer.cs">
+      <DependentUpon>Add_Modify_ProtocolType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_SerialCOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_SerialCOM.Designer.cs">
+      <DependentUpon>Add_Modify_SerialCOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_SolarEnergy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_SolarEnergy.Designer.cs">
+      <DependentUpon>Add_Modify_SolarEnergy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Station.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_Station.Designer.cs">
+      <DependentUpon>Add_Modify_Station.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_TurnTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_TurnTable.Designer.cs">
+      <DependentUpon>Add_Modify_TurnTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_UPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_UPS.Designer.cs">
+      <DependentUpon>Add_Modify_UPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_VibrationCable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_edit_dialogs\Add_Modify_VibrationCable.Designer.cs">
+      <DependentUpon>Add_Modify_VibrationCable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandFunction\Camera_Command.cs" />
+    <Compile Include="CommandFunction\Computer_Command.cs" />
+    <Compile Include="CommandFunction\DeviceType_Command.cs" />
+    <Compile Include="CommandFunction\ImportantLandmark_Command.cs" />
+    <Compile Include="CommandFunction\PersonnelInformation_Command.cs" />
+    <Compile Include="CommandFunction\Radar_Command.cs" />
+    <Compile Include="CommandFunction\Server_Command.cs" />
+    <Compile Include="CommandFunction\StreamMedia_Command.cs" />
+    <Compile Include="CommandFunction\ProtocolType_Command.cs" />
+    <Compile Include="CommandFunction\SerialCOM_Command.cs" />
+    <Compile Include="CommandFunction\SolarEnergy_Command.cs" />
+    <Compile Include="CommandFunction\Station_Command.cs" />
+    <Compile Include="CommandFunction\TurnTable_Command.cs" />
+    <Compile Include="CommandFunction\UPSData_Command.cs" />
+    <Compile Include="CommandFunction\VibrationCable_Command.cs" />
+    <Compile Include="DataBaseParameterType.cs" />
+    <Compile Include="DeviceEntity\CameraList.cs" />
+    <Compile Include="DeviceEntity\ComputerList.cs" />
+    <Compile Include="DeviceEntity\DeviceTypeList.cs" />
+    <Compile Include="DeviceEntity\DVRorNVR_SwitchList.cs" />
+    <Compile Include="DeviceEntity\ImportantLandmarkList.cs" />
+    <Compile Include="DeviceEntity\PersonnelInformationList.cs" />
+    <Compile Include="DeviceEntity\ProtocolTypeList.cs" />
+    <Compile Include="DeviceEntity\RadarList.cs" />
+    <Compile Include="DeviceEntity\SerialCOMList.cs" />
+    <Compile Include="DeviceEntity\ServerList.cs" />
+    <Compile Include="DeviceEntity\SolarEnergyList.cs" />
+    <Compile Include="DeviceEntity\StationList.cs" />
+    <Compile Include="DeviceEntity\StreamMediaList.cs" />
+    <Compile Include="DeviceEntity\StreamServerList.cs" />
+    <Compile Include="DeviceEntity\TurnTableList.cs" />
+    <Compile Include="DeviceEntity\UPSList.cs" />
+    <Compile Include="DeviceEntity\VibrationCableList.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables_From\ConfigCameraInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigCameraInfo.Designer.cs">
+      <DependentUpon>ConfigCameraInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigComputerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigComputerInfo.Designer.cs">
+      <DependentUpon>ConfigComputerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigDeviceTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigDeviceTypeInfo.Designer.cs">
+      <DependentUpon>ConfigDeviceTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigFacilityInformationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigFacilityInformationInfo.Designer.cs">
+      <DependentUpon>ConfigFacilityInformationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigImportantLandmarkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigImportantLandmarkInfo.Designer.cs">
+      <DependentUpon>ConfigImportantLandmarkInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigPersonnelInformationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigPersonnelInformationInfo.Designer.cs">
+      <DependentUpon>ConfigPersonnelInformationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigProtocolTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigProtocolTypeInfo.Designer.cs">
+      <DependentUpon>ConfigProtocolTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigRadarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigRadarInfo.Designer.cs">
+      <DependentUpon>ConfigRadarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigSerialCOMInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigSerialCOMInfo.Designer.cs">
+      <DependentUpon>ConfigSerialCOMInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigServerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigServerInfo.Designer.cs">
+      <DependentUpon>ConfigServerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigSolarEnergyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigSolarEnergyInfo.Designer.cs">
+      <DependentUpon>ConfigSolarEnergyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigStationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigStationInfo.Designer.cs">
+      <DependentUpon>ConfigStationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigStreamMediaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigStreamMediaInfo.Designer.cs">
+      <DependentUpon>ConfigStreamMediaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigTurnTableInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigTurnTableInfo.Designer.cs">
+      <DependentUpon>ConfigTurnTableInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigUPSInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigUPSInfo.Designer.cs">
+      <DependentUpon>ConfigUPSInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables_From\ConfigVibrationCableInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables_From\ConfigVibrationCableInfo.Designer.cs">
+      <DependentUpon>ConfigVibrationCableInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_Camera.resx">
+      <DependentUpon>Add_Modify_Camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_Computer.resx">
+      <DependentUpon>Add_Modify_Computer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_DeviceType.resx">
+      <DependentUpon>Add_Modify_DeviceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_ImportantLandmark.resx">
+      <DependentUpon>Add_Modify_ImportantLandmark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_PersonnelInformation.resx">
+      <DependentUpon>Add_Modify_PersonnelInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_ProtocolType.resx">
+      <DependentUpon>Add_Modify_ProtocolType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_Radar.resx">
+      <DependentUpon>Add_Modify_Radar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_Server.resx">
+      <DependentUpon>Add_Modify_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_StreamMedia.resx">
+      <DependentUpon>Add_Modify_StreamMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_SerialCOM.resx">
+      <DependentUpon>Add_Modify_SerialCOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_SolarEnergy.resx">
+      <DependentUpon>Add_Modify_SolarEnergy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_Station.resx">
+      <DependentUpon>Add_Modify_Station.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_TurnTable.resx">
+      <DependentUpon>Add_Modify_TurnTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_UPS.resx">
+      <DependentUpon>Add_Modify_UPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_edit_dialogs\Add_Modify_VibrationCable.resx">
+      <DependentUpon>Add_Modify_VibrationCable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tables_From\ConfigCameraInfo.resx">
+      <DependentUpon>ConfigCameraInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigComputerInfo.resx">
+      <DependentUpon>ConfigComputerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigDeviceTypeInfo.resx">
+      <DependentUpon>ConfigDeviceTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigFacilityInformationInfo.resx">
+      <DependentUpon>ConfigFacilityInformationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigImportantLandmarkInfo.resx">
+      <DependentUpon>ConfigImportantLandmarkInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigPersonnelInformationInfo.resx">
+      <DependentUpon>ConfigPersonnelInformationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigProtocolTypeInfo.resx">
+      <DependentUpon>ConfigProtocolTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigRadarInfo.resx">
+      <DependentUpon>ConfigRadarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigSerialCOMInfo.resx">
+      <DependentUpon>ConfigSerialCOMInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigServerInfo.resx">
+      <DependentUpon>ConfigServerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigSolarEnergyInfo.resx">
+      <DependentUpon>ConfigSolarEnergyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigStationInfo.resx">
+      <DependentUpon>ConfigStationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigStreamMediaInfo.resx">
+      <DependentUpon>ConfigStreamMediaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigTurnTableInfo.resx">
+      <DependentUpon>ConfigTurnTableInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigUPSInfo.resx">
+      <DependentUpon>ConfigUPSInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables_From\ConfigVibrationCableInfo.resx">
+      <DependentUpon>ConfigVibrationCableInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeviceBaseData\DeviceBaseData.csproj">
+      <Project>{4d47e292-b166-4bdb-a5fa-c4b451b80b46}</Project>
+      <Name>DeviceBaseData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

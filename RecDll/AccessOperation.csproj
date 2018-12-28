@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1F297BF-4C5C-4E81-9FAE-399C6AF26034}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccessOperation</RootNamespace>
+    <AssemblyName>AccessOperation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmSetSDK.cs" />
+    <Compile Include="CaptureForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaptureForm1.Designer.cs">
+      <DependentUpon>CaptureForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ole\SwitchDateClass.cs" />
+    <Compile Include="Rec\AlarmRec.cs" />
+    <Compile Include="Rec\AutoRec.cs" />
+    <Compile Include="CapturePic.cs" />
+    <Compile Include="CHCNetSDK.cs" />
+    <Compile Include="ole\AutoRecInfoClass.cs" />
+    <Compile Include="ole\RecPathClass.cs" />
+    <Compile Include="ole\RunLogClass.cs" />
+    <Compile Include="ole\UserLogClass.cs" />
+    <Compile Include="RecDataClass.cs" />
+    <Compile Include="Rec\ManualRec.cs" />
+    <Compile Include="ole\Access.cs" />
+    <Compile Include="ole\RecFileClass.cs" />
+    <Compile Include="ole\RecPictureClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Entities\Client.Entities.csproj">
+      <Project>{BEF8B2DB-48F1-4F20-807C-FA476FDBCC1A}</Project>
+      <Name>Client.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseConfiguration\DatabaseConfiguration.csproj">
+      <Project>{77AF7B74-981B-4E22-A9A4-777CA861A2F8}</Project>
+      <Name>DatabaseConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeviceBaseData\DeviceBaseData.csproj">
+      <Project>{4d47e292-b166-4bdb-a5fa-c4b451b80b46}</Project>
+      <Name>DeviceBaseData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CaptureForm1.resx">
+      <DependentUpon>CaptureForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

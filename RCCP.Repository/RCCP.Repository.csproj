@@ -11,6 +11,7 @@
     <AssemblyName>RCCP.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,9 +30,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.SimpleCRUD, Version=1.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dapper.SimpleCRUD.1.13.0\lib\net45\Dapper.SimpleCRUD.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,12 +51,111 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\AlarmLogRepository.cs" />
+    <Compile Include="Concrete\ArmAndDisArmListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\CameraListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\CameraStatusListRepository.cs" />
+    <Compile Include="Concrete\ComputerListRepository.cs" />
+    <Compile Include="Concrete\DeviceTypeListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\DVRorNVR_SwitchListRepository.cs" />
+    <Compile Include="Concrete\ErrLogRepository.cs" />
+    <Compile Include="Concrete\AlarmInfoRepository.cs" />
+    <Compile Include="Concrete\LawFileInfoRepository.cs" />
+    <Compile Include="Concrete\ImportantLandmarkListRepository.cs" />
+    <Compile Include="Concrete\LensProtectionRepository.cs" />
+    <Compile Include="Concrete\LinkageDataRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\MailTableRepository.cs" />
+    <Compile Include="Concrete\MailUserRepository.cs" />
+    <Compile Include="Concrete\PersonnelInformationListRepository.cs" />
+    <Compile Include="Concrete\PresetListRepository.cs" />
+    <Compile Include="Concrete\Pre_arrangedListRepository.cs" />
+    <Compile Include="Concrete\Pre_arrangedPlanningRepository.cs" />
+    <Compile Include="Concrete\ProtocolTypeListRepository.cs" />
+    <Compile Include="Concrete\RadarListRepository.cs" />
+    <Compile Include="Concrete\RunLogRepository.cs" />
+    <Compile Include="Concrete\SerialCOMListRepository.cs" />
+    <Compile Include="Concrete\ServerListRepository.cs" />
+    <Compile Include="Concrete\SolarEnergyListRepository.cs" />
+    <Compile Include="Concrete\SolarEnergyStatusListRepository.cs" />
+    <Compile Include="Concrete\StationListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\StreamMediaListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\StreamServerListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\TurnTableListRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\UPSListRepository.cs" />
+    <Compile Include="Concrete\UPSStatusListRepository.cs" />
+    <Compile Include="Concrete\UserListRepository.cs" />
+    <Compile Include="Concrete\UserPermissionListRepository.cs" />
+    <Compile Include="Concrete\UserRoleRepository.cs" />
+    <Compile Include="Concrete\VibrationCableListRepository.cs" />
+    <Compile Include="Concrete\VideoAlarmListRepository.cs" />
+    <Compile Include="Concrete\ImgRecRepository.cs" />
+    <Compile Include="Concrete\VideoRecRepository.cs" />
+    <Compile Include="Entities\AlarmInfo.cs" />
+    <Compile Include="Entities\ArmAndDisarmList.cs" />
+    <Compile Include="Entities\DynamicEntity\AlarmLog.cs" />
+    <Compile Include="Entities\DynamicEntity\CameraStatusList.cs" />
+    <Compile Include="Entities\DynamicEntity\ErrLog.cs" />
+    <Compile Include="Entities\DynamicEntity\RunLog.cs" />
+    <Compile Include="Entities\DynamicEntity\UserList.cs" />
+    <Compile Include="Entities\DynamicEntity\UserPermissionList.cs" />
+    <Compile Include="Entities\DynamicEntity\UserRole.cs" />
+    <Compile Include="Entities\ImgRec.cs" />
+    <Compile Include="Entities\LawFileInfo.cs" />
+    <Compile Include="Entities\LoginUserInfomation.cs" />
+    <Compile Include="Entities\MailTable.cs" />
+    <Compile Include="Entities\MailUser.cs" />
+    <Compile Include="Entities\Pre-arrangedPlanning.cs" />
+    <Compile Include="Entities\PresetList.cs" />
+    <Compile Include="Entities\Pre_arrangeList.cs" />
+    <Compile Include="Entities\StaticEntity\CameraList.cs" />
+    <Compile Include="Entities\LinkageData.cs" />
+    <Compile Include="Entities\StaticEntity\ComputerList.cs" />
+    <Compile Include="Entities\StaticEntity\DeviceTypeList.cs" />
+    <Compile Include="Entities\StaticEntity\DVRorNVR_SwitchList.cs" />
+    <Compile Include="Entities\StaticEntity\ImportantLandmarkList.cs" />
+    <Compile Include="Entities\StaticEntity\LensProtection.cs" />
+    <Compile Include="Entities\StaticEntity\PersonnelInformationList.cs" />
+    <Compile Include="Entities\StaticEntity\ProtocolTypeList.cs" />
+    <Compile Include="Entities\StaticEntity\RadarList.cs" />
+    <Compile Include="Entities\StaticEntity\SerialCOMList.cs" />
+    <Compile Include="Entities\StaticEntity\ServerList.cs" />
+    <Compile Include="Entities\StaticEntity\SolarEnergyList.cs" />
+    <Compile Include="Entities\DynamicEntity\SolarEnergyStatusList.cs" />
+    <Compile Include="Entities\StaticEntity\StationList.cs" />
+    <Compile Include="Entities\StaticEntity\StreamMediaList.cs" />
+    <Compile Include="Entities\StaticEntity\StreamServerList.cs" />
+    <Compile Include="Entities\StaticEntity\TurnTableList.cs" />
+    <Compile Include="Entities\StaticEntity\UPSList.cs" />
+    <Compile Include="Entities\DynamicEntity\UPSStatusList.cs" />
+    <Compile Include="Entities\StaticEntity\VibrationCableList.cs" />
+    <Compile Include="Entities\VideoAlarmList.cs" />
+    <Compile Include="Entities\VideoRec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
-    <Folder Include="Entities\OMEntity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
